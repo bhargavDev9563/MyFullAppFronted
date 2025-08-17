@@ -11,7 +11,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://myfullappbackend.onrender.comapi/register", { name, email, password });
+      await axios.post("https://myfullappbackend.onrender.com/api/register", { name, email, password });
       navigate("/login");
     } catch (err) {
       alert("Registration failed: " + err.response.data.error);

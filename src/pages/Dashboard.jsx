@@ -10,7 +10,7 @@ function Dashboard() {
     const token = localStorage.getItem("token");
     if (!token) return navigate("/login");
 
-    axios.get("https://myfullappbackend.onrender.comapi/user", {
+    axios.get("https://myfullappbackend.onrender.com/api/user", {
       headers: { Authorization: token }
     })
     .then(res => setUser(res.data))
